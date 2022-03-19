@@ -1,11 +1,6 @@
 pipeline {
   agent { label 'мастер' }
   stages {
-    stage('Install MySQL') {
-      steps {
-        sh 'git clone https://github.com/jenkinsci/database-mysql-plugin.git'
-      }
-    }
     stage('Run query') {
       steps {
         sh(script:'''
